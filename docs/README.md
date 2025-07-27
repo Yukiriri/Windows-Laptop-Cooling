@@ -109,13 +109,13 @@ cmd命令一览：
     ```
     powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "12a0ab44-fe28-4fa9-b3bd-4b64f44960a7" 90
     ```
-- 处理器闲置升级阈值
-    ```
-    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "7b224883-b3cc-4d79-819f-8374152cbe7c" 50
-    ```
 - 处理器闲置降级阈值
     ```
-    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "4b92d758-5a24-4851-a470-815d78aee119" 90
+    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "4b92d758-5a24-4851-a470-815d78aee119" 50
+    ```
+- 处理器闲置升级阈值
+    ```
+    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "7b224883-b3cc-4d79-819f-8374152cbe7c" 90
     ```
 - 处理器性能提升策略
     ```
