@@ -5,6 +5,9 @@
 > [!IMPORTANT]
 > 全文提到的cmd命令都需要管理员身份运行  
 
+> [!TIP]
+> 修改电源计划之前，推荐把电源计划重置默认  
+
 # CPU温度压制
 笔记本CPU唯一能控制的只有限制最高频率  
 由于笔记本CPU设计的冗余电压给的很大，再加上出厂即灰烬，散热技术也没有新突破，三管齐下就轻松顶着90度跑了  
@@ -95,6 +98,10 @@ cmd命令一览：
     ```
     powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "893dee8e-2bef-41e0-89c6-b55d0929964e" 0
     ```
+- 处理器性能内核休止分配阈值
+    ```
+    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "4bdaf4e9-d103-46d7-a5f0-6280121616ef" 1
+    ```
 - 处理器性能提高阈值
     ```
     powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "06cadf0e-64ed-448a-8927-ce7bf90eb35d" 50
@@ -104,18 +111,10 @@ cmd命令一览：
     ```
 - 处理器性能降低阈值
     ```
-    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "12a0ab44-fe28-4fa9-b3bd-4b64f44960a6" 90
+    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "12a0ab44-fe28-4fa9-b3bd-4b64f44960a6" 50
     ```
     ```
-    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "12a0ab44-fe28-4fa9-b3bd-4b64f44960a7" 90
-    ```
-- 处理器闲置降级阈值
-    ```
-    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "4b92d758-5a24-4851-a470-815d78aee119" 50
-    ```
-- 处理器闲置升级阈值
-    ```
-    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "7b224883-b3cc-4d79-819f-8374152cbe7c" 90
+    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "12a0ab44-fe28-4fa9-b3bd-4b64f44960a7" 50
     ```
 - 处理器性能提升策略
     ```
@@ -131,9 +130,9 @@ cmd命令一览：
     ```
     powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "40fbefc7-2e9d-4d25-a185-0cfd8574bac7" 1
     ```
-- 处理器性能增强策略
+- 处理器性能提升模式
     ```
-    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "45bcc044-d885-43e2-8605-ee0ec6e96b59" 0
+    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "be337238-0d82-4146-a960-4f3749d470c7" 3
     ```
 
 > [!NOTE]
