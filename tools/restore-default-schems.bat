@@ -1,2 +1,2 @@
-powercfg -restoredefaultschemes
-powercfg -setactive SCHEME_CURRENT
+powercfg -RestoreDefaultSchemes
+powercfg -SetActive SCHEME_CURRENT
