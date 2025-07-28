@@ -100,7 +100,7 @@ cmd命令一览：
     ```
 - 处理器性能内核休止分配阈值
     ```
-    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "4bdaf4e9-d103-46d7-a5f0-6280121616ef" 1
+    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "4bdaf4e9-d103-46d7-a5f0-6280121616ef" 50
     ```
 - 处理器性能提高阈值
     ```
@@ -111,10 +111,10 @@ cmd命令一览：
     ```
 - 处理器性能降低阈值
     ```
-    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "12a0ab44-fe28-4fa9-b3bd-4b64f44960a6" 50
+    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "12a0ab44-fe28-4fa9-b3bd-4b64f44960a6" 90
     ```
     ```
-    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "12a0ab44-fe28-4fa9-b3bd-4b64f44960a7" 50
+    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "12a0ab44-fe28-4fa9-b3bd-4b64f44960a7" 90
     ```
 - 处理器性能提升策略
     ```
@@ -129,10 +129,6 @@ cmd命令一览：
     ```
     ```
     powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "40fbefc7-2e9d-4d25-a185-0cfd8574bac7" 1
-    ```
-- 处理器性能提升模式
-    ```
-    powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "be337238-0d82-4146-a960-4f3749d470c7" 3
     ```
 
 > [!NOTE]
