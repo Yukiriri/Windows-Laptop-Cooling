@@ -130,6 +130,10 @@ cmd命令一览：
     ```
     powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "40fbefc7-2e9d-4d25-a185-0cfd8574bac7" 1
     ```
+- 让修改生效
+    ```
+    powercfg -SetActive SCHEME_CURRENT
+    ```
 
 > [!NOTE]
 > 这些修改并不影响最高性能上限  
