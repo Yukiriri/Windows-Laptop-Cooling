@@ -4,7 +4,7 @@
   
 由于笔记本CPU设计的冗余电压给的很大，再加上出厂即灰烬，散热技术也没有新突破，三管齐下就轻松顶着90度跑了  
 想要可观降低发热，就需要把达到边际效应的频率给取舍掉，也就是损失性能换温度  
-如果你的笔记本不支持限制功率，或者不想用工具限制，就可以用这套方案  
+如果你的笔记本不支持限制功率，或者不想用工具限制，就可以用这套操作  
 
 > [!IMPORTANT]
 > 全文提到的cmd命令都需要管理员身份运行  
@@ -14,28 +14,20 @@
 > 也推荐使用`平衡`电源计划  
 
 > [!NOTE]
-> 仓库的`tools`文件夹里有写好的脚本版  
+> 仓库的`tools`文件夹里有写好的一键脚本版  
 
 # CPU温度压制
 cmd命令一览：
 - 设置插电CPU频率上限
     ```
     powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "75b0ae3f-bce0-45a7-8c89-c9611c25e100" 3000
-    ```
-    ```
     powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "75b0ae3f-bce0-45a7-8c89-c9611c25e101" 3000
-    ```
-    ```
     powercfg -SetAcValueIndex SCHEME_CURRENT SUB_PROCESSOR "75b0ae3f-bce0-45a7-8c89-c9611c25e102" 3000
     ```
 - 设置离电CPU频率上限
     ```
     powercfg -SetDcValueIndex SCHEME_CURRENT SUB_PROCESSOR "75b0ae3f-bce0-45a7-8c89-c9611c25e100" 3000
-    ```
-    ```
     powercfg -SetDcValueIndex SCHEME_CURRENT SUB_PROCESSOR "75b0ae3f-bce0-45a7-8c89-c9611c25e101" 3000
-    ```
-    ```
     powercfg -SetDcValueIndex SCHEME_CURRENT SUB_PROCESSOR "75b0ae3f-bce0-45a7-8c89-c9611c25e102" 3000
     ```
 - 让修改生效
